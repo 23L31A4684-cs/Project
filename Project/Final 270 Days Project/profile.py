@@ -244,3 +244,21 @@ print(target_db)
 print(log_filename)
 print(markup_factor)
 
+
+# DAY-14
+
+# Task of Day-14/Day-270
+
+# Create a new list containing a mix of new skills and skills we already have:
+#Convert Arrays to Sets: We need to convert both our Day 12 array and our new array into sets so we can merge them:
+#Create set_1 = set(optimized_skills_dataset) (This pulls your clean array from Day 12)
+#Create set_2 = set(batch_2_raw_skills)
+#Execute the Union Merge: Create a new variable named master_unique_skills and use the Union operator (|) to combine set_1 and set_2.
+#Display System Output: Print a clean header log --- DAY 14: DEDUPLICATION ENGINE --- and print out your final master_unique_skills set to prove to the system that all overlaps (like Python and SQL) were safely eliminated.
+
+batch_2_raw_skills = ["SQL", "Cloud Computing", "Python", "Data Warehousing", "PowerBI"]
+Create_set1=set(PIPELINE_INFRASTRUCTURE)
+Create_set2=set(batch_2_raw_skills)
+master_unique_skills=Create_set1 | Create_set2
+print("--- DAY 14: DEDUPLICATION ENGINE ---")
+print(master_unique_skills)
