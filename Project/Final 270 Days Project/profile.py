@@ -262,3 +262,34 @@ Create_set2=set(batch_2_raw_skills)
 master_unique_skills=Create_set1 | Create_set2
 print("--- DAY 14: DEDUPLICATION ENGINE ---")
 print(master_unique_skills)
+
+
+# DAY-15
+
+# Task of DAY-15/DAY-270
+
+# Create a 2D array representing three different web-scraping batches containing job skills:
+#multi_batch_stream = [
+ #   ["SQL", "Python", "Data Modeling"],
+  #  ["PowerBI", "SQL", "Excel"],
+   # ["Machine Learning", "Python", "Cloud"]
+#]
+##Initialize a Master Storage Set: Create an empty set named global_unique_skills = set(). We will use this to automatically destroy duplicates as our nested loop runs.
+#Build the Nested Extraction Loop: * Write an outer for loop to step through the batches in multi_batch_stream.
+#Write an inner for loop to step through every skill inside the current batch.
+#Inside the inner loop, add the skill to your global_unique_skills set using the .add() method.
+#Display System Output: Print a clean header log --- DAY 15: MULTI-LAYERED INGESTION ENGINE --- and print your finalized global_unique_skills set.
+
+multi_batch_stream = [
+    ["SQL", "Python", "Data Modeling"],
+    ["PowerBI", "SQL", "Excel"],
+    ["Machine Learning", "Python", "Cloud"]
+]
+
+globla_unique_cells=set()
+for batches in multi_batch_stream:
+    for skill in batches:
+        c=globla_unique_cells.add(skill)
+    
+print("--- DAY 15: MULTI-LAYERED INGESTION ENGINE ---")
+print(globla_unique_cells)
