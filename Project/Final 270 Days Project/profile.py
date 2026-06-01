@@ -210,3 +210,37 @@ try:
         print("pipeline_audit.txt read successfully.")
 except FileNotFoundError:
     print("[SYSTEM OVERRIDE]: Audit file not found. Booting with a fresh slate.")
+
+# DAY-12
+
+# Task of Day-12/Day-270
+
+#senting skills captured from a live data feed:
+#incoming_raw_pool = ["  Excel ", "Python", "  SQL ", "PowerBI", "Generative AI", "Tableau", "  Machine Learning "]
+#Refactor with Comprehensions: Write a single, optimized list comprehension line named optimized_skills_dataset.
+#It must run .strip() on every skill to clean the messy spaces.
+#It must use an if condition at the end to filter out "Excel" and "Tableau" (since we want to isolate only advanced coding/analytical assets).
+#Display the Output: Print a clean visual header line and display your freshly compressed optimized_skills_dataset list to verify it works perfectly.
+
+incoming_raw_pool=["  Excel ", "Python", "  SQL ", "PowerBI", "Generative AI", "Tableau", "  Machine Learning "]
+operation=[optimised_skill_dataset.strip() for optimised_skill_dataset in incoming_raw_pool if optimised_skill_dataset.strip() not in ["Excel","Tableau"]]
+print(operation)
+
+
+# DAY-13
+
+# Task of Day-13/Day-270
+
+# Create a permanent tuple named PIPELINE_INFRASTRUCTURE containing three fixed items mapping our exact engine properties:
+#PIPELINE_INFRASTRUCTURE = ("SQL_Local_Instance", "pipeline_audit.txt", 1.10)
+#(These represent your target SQL database, your audit file name from Day 9, and your price markup multiplier from your Day 12 hands-on tasks).
+#Unpack the Infrastructure Constants: On the very next line, write an unpacking statement to map those three hidden tuple values into three clearly named variables: target_db, log_filename, and markup_factor.
+#Display System Ingestion Parameters: Print a clean header console log section labeled "--- DAY 13: CORE INFRASTRUCTURE LOCKS ---" and print out your newly unpacked target_db and log_filename variables to confirm they are active and fully protected.
+
+PIPELINE_INFRASTRUCTURE=("SQL_Local_Instance", "pipeline_audit.txt", 1.10)
+target_db, log_filename,markup_factor=PIPELINE_INFRASTRUCTURE
+print("--- DAY 13: CORE INFRASTRUCTURE LOCKS ---")
+print(target_db)
+print(log_filename)
+print(markup_factor)
+
