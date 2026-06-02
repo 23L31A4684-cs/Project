@@ -305,3 +305,28 @@ for job in scraped_job_postings:
     core_skill = job["core_skill"]
     if core_skill in globla_unique_cells:
         print(f"[SKILL MATCH] Candidate profile aligns with {role} (ID: {job_id})")
+
+# DAY-16
+
+# Task of Day-16/Day-270
+
+# Simulate a Structured Data Feed: Create a new list called scraped_job_postings that contains three dictionaries. Each dictionary must have three keys: "job_id", "role", and "core_skill".
+#Example Row 1: {"job_id": 5001, "role": "Data Analyst", "core_skill": "SQL"}
+#Example Row 2: {"job_id": 5002, "role": "Backend Dev", "core_skill": "Java"}
+#Example Row 3: {"job_id": 5003, "role": "BI Developer", "core_skill": "PowerBI"}
+#Build the Analytics Matcher: Write a for loop to step through scraped_job_postings (for job in scraped_job_postings:).
+#Cross-Reference Data: Inside the loop, extract the "core_skill" from the current dictionary. Use an if statement with the in operator to check if that specific skill exists inside your global_unique_skills set from Day 15.
+#Display System Output: If the skill matches, print: "[SKILL MATCH] Candidate profile aligns with {role} (ID: {job_id})".
+scraped_job_postings=[
+    {"job_id": 5001, "role": "Data Analyst", "core_skill": "SQL"},
+    {"job_id": 5002, "role": "Backend Dev", "core_skill": "Java"},
+    {"job_id": 5003, "role": "BI Developer", "core_skill": "PowerBI"}
+]
+print("--- DAY 16: JOB SKILL MATCHES ---")
+for job in scraped_job_postings:
+    job_id = job["job_id"]
+    role = job["role"]
+    core_skill = job["core_skill"]
+    if core_skill in globla_unique_cells:
+        print(f"[SKILL MATCH] Candidate profile aligns with {role} (ID: {job_id})")
+print("\n")
