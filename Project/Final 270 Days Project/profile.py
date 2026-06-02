@@ -330,3 +330,33 @@ for job in scraped_job_postings:
     if core_skill in globla_unique_cells:
         print(f"[SKILL MATCH] Candidate profile aligns with {role} (ID: {job_id})")
 print("\n")
+
+# DAY-17
+
+# Task of Day-17/Day-270
+
+# Create a list named production_live_feed holding three structured rows with incomplete information:
+#production_live_feed = [
+ #   {"job_id": 7001, "role": "Data Scientist", "salary": 1200000, "location": "Hyderabad"},
+  #  {"job_id": 7002, "role": "ML Engineer", "location": "Bangalore"}, # Missing salary
+   # {"job_id": 7003, "role": "AI Researcher"} # Missing salary AND location
+#]
+#Build the Safe Extraction Engine: Write a for loop to iterate through production_live_feed.
+#Extract Fields with Guardrails: * Extract role directly.
+#Extract salary using .get() with a fallback integer default of 0.
+#Extract location using .get() with a fallback string default of "Alternative / Remote".
+#Display Cleaned Logs: Print a clean visual header line --- DAY 17: FAULT-TOLERANT PIPELINE --- and log each processed entry clearly to prove the pipeline ran smoothly across incomplete inputs without crashing
+
+production_live_feed = [
+    {"job_id": 7001, "role": "Data Scientist", "salary": 1200000, "location": "Hyderabad"},
+    {"job_id": 7002, "role": "ML Engineer", "location": "Bangalore"}, # Missing salary
+    {"job_id": 7003, "role": "AI Researcher"} # Missing salary AND location
+]
+print("--- DAY 17: FAULT-TOLERANT PIPELINE ---")
+for production in production_live_feed:
+    job_id=production["job_id"]
+    job_role=production["role"]
+    job_salary=production.get("salary",0)
+    job_location=production.get("location","Alternative/Remote")
+    print(f" Job ID: {job_id} | Job role : {job_role} | Job salary : {job_salary} | Job Location : {job_location} ")
+
