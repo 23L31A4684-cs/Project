@@ -293,3 +293,15 @@ for batches in multi_batch_stream:
     
 print("--- DAY 15: MULTI-LAYERED INGESTION ENGINE ---")
 print(globla_unique_cells)
+
+scraped_job_postings=[
+    {"job_id": 5001, "role": "Data Analyst", "core_skill": "SQL"},
+    {"job_id": 5002, "role": "Backend Dev", "core_skill": "Java"},
+    {"job_id": 5003, "role": "BI Developer", "core_skill": "PowerBI"}
+]
+for job in scraped_job_postings:
+    job_id = job["job_id"]
+    role = job["role"]
+    core_skill = job["core_skill"]
+    if core_skill in globla_unique_cells:
+        print(f"[SKILL MATCH] Candidate profile aligns with {role} (ID: {job_id})")
